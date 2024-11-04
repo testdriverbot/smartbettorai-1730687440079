@@ -1,0 +1,22 @@
+version: 4.0.79
+steps:
+  - prompt: Interact with the navigation menu.
+    commands:
+      - command: hover-text
+        text: Standard Features
+        description: first item in the navigation menu
+        action: click
+  - prompt: Interact with the navigation menu.
+    commands:
+      - command: hover-text
+        text: +EV
+        description: second item in the navigation menu
+        action: click
+  - prompt: >-
+      Assert that each section loads  # Use the content of the file from the
+      environment
+    commands:
+      - command: assert
+        expect: the +EV Dashboard is visible
+      - command: assert
+        expect: the Standard Features section is visible
