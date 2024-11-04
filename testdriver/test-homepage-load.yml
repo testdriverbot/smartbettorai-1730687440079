@@ -1,0 +1,16 @@
+version: 4.0.79
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Assert that the webpage logo is visible.
+    commands:
+      - command: assert
+        expect: the webpage logo is visible
+  - prompt: >-
+      Assert that no cookie banner appears, or click it to dismiss it.  # Use
+      the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the webpage logo is visible in the top left corner
