@@ -1,0 +1,35 @@
+version: 4.0.79
+steps:
+  - prompt: >-
+      Click on "Contact" or "Contact Us" link  # Use the content of the file
+      from the environment
+    commands:
+      - command: hover-text
+        text: Contact
+        description: link in the navigation menu
+        action: click
+  - prompt: >-
+      Click on "Contact" or "Contact Us" link  # Use the content of the file
+      from the environment
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: press-keys
+        keys:
+          - control
+          - f
+      - command: type
+        text: Contact
+  - prompt: >-
+      Click on "Contact" or "Contact Us" link  # Use the content of the file
+      from the environment
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll-until-text
+        text: Contact
+        direction: down
+      - command: hover-text
+        text: Contact
+        description: link in the page content
+        action: click
