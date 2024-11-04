@@ -1,0 +1,14 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Discord" or any social media link.
+    commands:
+      - command: hover-text
+        text: Discord
+        description: Discord link in the sidebar
+        action: click
+  - prompt: >-
+      Assert the link directs to the appropriate social media platform without
+      errors.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the page shows a Discord invitation
