@@ -1,0 +1,1 @@
+1. If footer exists, test any link present
