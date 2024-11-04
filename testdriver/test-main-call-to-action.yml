@@ -1,0 +1,20 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Get Started."
+    commands:
+      - command: hover-text
+        text: Get Started
+        description: button to begin the process
+        action: click
+  - prompt: Assert that a sign-up form or onboarding process is displayed.
+    commands:
+      - command: assert
+        expect: a sign-up form is displayed with "Sign Up" buttons
+  - prompt: >-
+      Complete the process to test navigation and interactions.  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Sign Up
+        description: button under the Basic plan
+        action: click
