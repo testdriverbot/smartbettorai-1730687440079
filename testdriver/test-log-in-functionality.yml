@@ -1,0 +1,36 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Log In."
+    commands:
+      - command: hover-text
+        text: Log In
+        description: button on the webpage
+        action: click
+  - prompt: Assert that a login form appears.
+    commands:
+      - command: assert
+        expect: the login form with fields for email and password is visible
+  - prompt: Enter test credentials to verify login works.
+    commands:
+      - command: hover-text
+        text: Email address
+        description: email input field
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: TestPassword123
+      - command: hover-text
+        text: Sign in
+        description: sign in button
+        action: click
+  - prompt: >-
+      Assert that the login redirects successfully to a dashboard.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the dashboard is visible with user-specific content
