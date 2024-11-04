@@ -1,0 +1,1 @@
+1. Click on "Contact" or "Contact Us" link

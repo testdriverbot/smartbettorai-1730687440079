@@ -1,0 +1,1 @@
+1. Click on "Resources" in the navigation
